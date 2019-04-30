@@ -15,6 +15,13 @@ function __sf_section_aws -d "Display the selected aws profile"
 	__sf_util_set_default SPACEFISH_AWS_SYMBOL "☁️ "
 	__sf_util_set_default SPACEFISH_AWS_COLOR ff8700
 
+    if test "$SPACEFISH_PROMPT_NERD_MODE" -eq "true"
+        __sf_util_set_default SPACEFISH_AWS_SYMBOL \ue7ad\u0020
+    else
+        __sf_util_set_default SPACEFISH_AWS_SYMBOL "☁️ "
+    end
+
+
 	# ------------------------------------------------------------------------------
 	# Section
 	# ------------------------------------------------------------------------------
